@@ -2,13 +2,13 @@ require 'rake/testtask'
 
 class EnvTestTask < Rake::TestTask
   attr_accessor :env
-  
+
   def ruby(*args)
     env.each { |key, value| ENV[key] = value } if env
     super
     env.keys.each { |key| ENV.delete(key) } if env
   end
-  
+
 end
 
 desc 'Test the GeoKit plugin.'

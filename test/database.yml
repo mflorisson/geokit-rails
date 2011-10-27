@@ -1,7 +1,7 @@
 baes: &base
   host: localhost
   username: tests
-  password: 
+  password:
 
 mysql:
   adapter: mysql

@@ -14,10 +14,10 @@ class GeokitTestCase < ActiveSupport::TestCase
   rescue NameError
     puts "You appear to be using a pre-2.3 version of Rails. No need to include ActiveRecord::TestFixtures."
   end
-  
+
   self.fixture_path = (PLUGIN_ROOT + 'test/fixtures').to_s
   self.use_transactional_fixtures = true
   self.use_instantiated_fixtures  = false
-  
-  fixtures :all 
+
+  fixtures :all
 end
